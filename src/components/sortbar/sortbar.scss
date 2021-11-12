@@ -1,0 +1,37 @@
+#sortbar{
+  margin: 0px;
+  padding: 15px;
+  border: 1px solid gray;
+  flex-direction:row;
+  background-color:#0A3459;
+  border-radius: 5px;
+  color:white;
+  -webkit-appearance: radio;
+  grid-column-start: 2;
+  grid-column-end: 3;
+
+  
+  form{
+    display:inline;
+    color:white;
+    margin: 0px;
+
+    label{
+      margin: 0px;
+      padding: 0px;
+      font-weight: bold;
+    }
+  }
+
+  button {
+    margin: 5px;
+    background-color:#F279A6;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+}
