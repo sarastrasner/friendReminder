@@ -8,29 +8,32 @@ import React from 'react';
 
 export const AppSettingsContext = React.createContext();
 
-class AppSettings extends React.Component{
-  constructor(props){
+class AppSettings extends React.Component {
+  constructor(props) {
     super(props);
-    this.state={
-      showCompleted:true,
+    this.state = {
+      showCompleted: true,
       itemsPerScreen: 3,
       defaultSortField: '',
       setDefaultSort: this.setDefaultSort,
-      setCompleted: this.setCompleted
-    }
+      setCompleted: this.setCompleted,
+    };
   }
 
-  setCompleted = (preference) => { this.setState({ showCompleted: preference }) }
+  setCompleted = preference => {
+    this.setState({ showCompleted: preference });
+  };
 
+  setDefaultSort = preference => {
+    this.setState({ defaultSortField: preference });
+  };
 
-  setDefaultSort = (preference) => { this.setState({ defaultSortField: preference }) }
-
-  render(){
-    return(
+  render() {
+    return (
       <AppSettingsContext.Provider value={this.state}>
         {this.props.children}
       </AppSettingsContext.Provider>
-    )
+    );
   }
 }
 

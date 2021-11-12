@@ -1,8 +1,8 @@
 import React from 'react';
-import ToDo from '../todo';
+import DataTable from '../dataTable';
 import Header from '../header/header';
 import Footer from '../footer/footer';
-import './if.scss'
+import './if.scss';
 
 import AppSettingsContext from '../../context/settings/context';
 import Auth from '../../context/auth/auth';
@@ -13,7 +13,7 @@ function If(props) {
       <Auth capability="read">
         <AppSettingsContext>
           <Header />
-          <ToDo />
+          <DataTable />
           <Footer />
         </AppSettingsContext>
       </Auth>
